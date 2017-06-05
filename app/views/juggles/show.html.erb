@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trick:</strong>
+  <%= @juggle.trick %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @juggle.difficulty %>
+</p>
+
+<%= link_to 'Edit', edit_juggle_path(@juggle) %> |
+<%= link_to 'Back', juggles_path %>

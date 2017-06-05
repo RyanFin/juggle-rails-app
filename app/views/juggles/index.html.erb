@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Juggles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trick</th>
+      <th>Difficulty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @juggles.each do |juggle| %>
+      <tr>
+        <td><%= juggle.trick %></td>
+        <td><%= juggle.difficulty %></td>
+        <td><%= link_to 'Show', juggle %></td>
+        <td><%= link_to 'Edit', edit_juggle_path(juggle) %></td>
+        <td><%= link_to 'Destroy', juggle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Juggle', new_juggle_path %>

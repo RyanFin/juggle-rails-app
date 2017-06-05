@@ -1,0 +1,25 @@
+<%= form_for(@juggle) do |f| %>
+  <% if @juggle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@juggle.errors.count, "error") %> prohibited this juggle from being saved:</h2>
+
+      <ul>
+      <% @juggle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :trick %><br>
+    <%= f.text_field :trick %>
+  </div>
+  <div class="field">
+    <%= f.label :difficulty %><br>
+    <%= f.text_field :difficulty %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
